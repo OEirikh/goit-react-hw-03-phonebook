@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import s from "./ContactsList.module.css";
 import Contact from "../Contact";
 
 function ContactsList({ list, onClick }) {
