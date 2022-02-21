@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { nanoid } from "nanoid";
+import s from "./App.module.css";
 
 import ContactForm from "./Components/ContactForm";
 import Filter from "./Components/Filter";
@@ -69,13 +70,15 @@ class App extends Component {
       this;
 
     return (
-      <Container>
-        <h1>Phonebook</h1>
-        <ContactForm addContact={addContact} />
-        <h2>Contacts</h2>
-        <Filter value={filter} onFilterChange={handleFilterChange} />
-        <ContactsList list={getFindContact()} onClick={deleteContact} />
-      </Container>
+      <div className={s.App}>
+        <Container>
+          <h1>Phonebook</h1>
+          <ContactForm addContact={addContact} />
+          <h2>Contacts</h2>
+          <Filter value={filter} onFilterChange={handleFilterChange} />
+          <ContactsList list={getFindContact()} onClick={deleteContact} />
+        </Container>
+      </div>
     );
   }
 }

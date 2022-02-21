@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import s from "./ContactsList.module.css";
-import Contact from "../Contact";
+import Contact from "./Contact";
 
 function ContactsList({ list, onClick }) {
   return (
-    <ul>
+    <ul className={s.ContactList}>
       {list.map(({ name, number, id }, idx) => (
         <Contact
           key={id}

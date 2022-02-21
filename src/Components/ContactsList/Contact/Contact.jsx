@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-import Button from "../Button";
+import s from "./Contact.module.css";
+import Button from "../../Button";
 
 function Contact({ name, number, idx, onClick }) {
   return (
-    <li>
+    <li className={s.Contact}>
       <p>
         {idx + 1} - {name}: {number}
-        <Button onClick={onClick} text="Delete" type="button" />
       </p>
+      <Button onClick={onClick} text="Delete" type="button" />
     </li>
   );
 }
